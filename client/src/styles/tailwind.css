@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GeistMono";
+  src:
+    url("../fonts/GeistMono.ttf") format("truetype"),
+    url("../fonts/GeistMono.woff") format("woff2");
+}
+
+@font-face {
+  font-family: "GeistSans";
+  src:
+    url("../fonts/Geist.ttf") format("truetype"),
+    url("../fonts/Geist.woff") format("woff2");
+}
+
+body {
+  @apply text-white;
+  font-family: "GeistSans", sans-serif;
+}
+
+.otc-input {
+  @apply m-2 h-16 w-12 rounded-lg border-2 border-zinc-800 bg-zinc-950 p-3 text-center outline-none;
+  transition: border-color 0.3s ease;
+}
+
+.otc-input:focus {
+  @apply border-zinc-500;
+}
+
+.otc-input:valid {
+  @apply border-emerald-500;
+}
